@@ -4,17 +4,16 @@ import './global.css';
 import { Cartao, Container } from './styles';
 
 function App() {
-  let dadosCard = {
+  let dadosCard = [{
     "cliente" : "carlos",
     "funcionario" : "pedro",
     "tratamento" : "hidra",
     "telefone" : "999998"
-  };
+  }];
 
-  console.log(dadosCard);
   return (
     <Container>
-      <Card dados={dadosCard} ></Card>
+      <Card dados={dadosCard[0]} ></Card>
     </Container>
   );
 }
