@@ -1,37 +1,20 @@
 import React from 'react';
-import Card from './Card';
+import Card from './components/card/Card';
 import './global.css';
 import { Cartao, Container } from './styles';
 
 function App() {
+  let dadosCard = {
+    "cliente" : "carlos",
+    "funcionario" : "pedro",
+    "tratamento" : "hidra",
+    "telefone" : "999998"
+  };
+
+  console.log(dadosCard);
   return (
     <Container>
-      <Card variavel="12dsd" ></Card>
-      <Cartao><div className='dados-horario'><h2>08:00</h2></div><div className='dados-usuario' >
-        <ul>
-          <li>cliente: gracione</li>
-          <li>tratamento: chapinha</li>
-          </ul>
-        </div></Cartao>
-      <Cartao><div className='dados-horario'><h2>08:00</h2></div><div className='dados-usuario' >
-        <ul>
-          <li>cliente: gracione</li>
-          <li>tratamento: chapinha</li>
-          </ul>
-        </div></Cartao>
-      <Cartao><div className='dados-horario'><h2>08:00</h2></div><div className='dados-usuario' >
-        <ul>
-          <li>cliente: gracione</li>
-          <li>tratamento: chapinha</li>
-          </ul>
-        </div></Cartao>
-      <Cartao><div className='dados-horario'><h2>08:00</h2></div><div className='dados-usuario' >
-        <ul>
-          <li>cliente: gracione</li>
-          <li>tratamento: chapinha</li>
-          </ul>
-        </div></Cartao>
-      <Cartao></Cartao>
+      <Card dados={dadosCard} ></Card>
     </Container>
   );
 }
