@@ -3,65 +3,38 @@ import styled from "styled-components"
 export const Container = styled.div`
     width:100%;
     height:100vh;
+    background:blue;
 
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:5px;
+    padding:1px;
     `;
-
-export const Nav = styled.div`
-    width:100%;
-    height:10vh;
+export const Cartao = styled.div`
+    width:60vh;
+    height:18vh;
+    background:white;
+    border:solid;
     border-radius:5px;
-    background:#483D8B;
-    color:white;
-    font-weight: bold;
-    padding:15px;
 
     display:flex;
     justify-content: space-between;
-    align-items: center;
-
-    ul{
+    .dados-horario{
+        width:50%;
+        border:solid;
         display:flex;
-        justify-content: space-around;
-    }
-    li{
-        margin-left:30px;
-        display:block;
-    }
-    a{
-        color: white;
-        text-decoration: none;
-    }
-    img{
-        width:10vh;
-    }
-`;
 
-export const Header = styled.div`
-    width:100%;
-    height:75vh;
-    background:pink;
+        flex-direction: column;
+        justify-content: space-between;
+        padding:1px;
+        }
+    .dados-usuario{
+        width:50%;
+        border:solid;
 
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-`;
-
-export const Footer = styled.div`
-    color:white;
-    width:100%;
-    height:10vh;
-
-    background:blue;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    li{
         display:flex;
         flex-direction: column;
-    }
+        justify-content: space-between;
+        padding:1px;
+        }
     `;
