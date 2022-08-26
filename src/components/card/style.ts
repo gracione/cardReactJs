@@ -37,4 +37,17 @@ export const Cartao = styled.div`
         justify-content: space-between;
         padding:1px;
         }
+    li{
+        display:flex;
+    }
+    .confirmar-desmarcar{
+        display:flex;
+        justify-content: space-between;
+    }
+    .confirmar{
+        background:green;
+    }
+    .desmarcar{
+        background:red;
+    }
     `;
