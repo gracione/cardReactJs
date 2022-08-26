@@ -1,36 +1,34 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
-    width:100%;
-    height:100vh;
-    background:blue;
-
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding:1px;
-    `;
 export const Cartao = styled.div`
-    width:60vh;
-    height:18vh;
+    width:350px;
+    height:120px;
     background:white;
-    border:solid;
+    border-left:solid 10px blue;
     border-radius:5px;
 
     display:flex;
     justify-content: space-between;
     .dados-horario{
-        width:50%;
-        border:solid;
-        display:flex;
+        width:40%;
 
+        display:flex;
         flex-direction: column;
         justify-content: space-between;
         padding:1px;
         }
+    .horario{
+        font-size:45px;
+        font-weight:500;
+        color:blue;
+
+        display:flex;
+        justify-content: center;
+        align-items:center;
+
+    }
     .dados-usuario{
-        width:50%;
-        border:solid;
+        width:60%;
 
         display:flex;
         flex-direction: column;
@@ -40,14 +38,33 @@ export const Cartao = styled.div`
     li{
         display:flex;
     }
+    li h2{
+        color:blue;
+    }
     .confirmar-desmarcar{
+        height:30px;
+        text-align:center;
+        font-size:13px;
+        font-weight:500;
+        
         display:flex;
-        justify-content: space-between;
     }
     .confirmar{
-        background:green;
+        width:50%;
+        background:blue;
+        padding:16px;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .desmarcar{
+        width:50%;
         background:red;
+        padding:16px;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
     }
     `;

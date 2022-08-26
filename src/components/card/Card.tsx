@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cartao } from "./style";
 
 interface tipoDeDados {
@@ -12,10 +11,12 @@ function Card({ cliente, funcionario, tratamento, telefone }: tipoDeDados) {
   return (
     <>
       <Cartao>
-        <div className='dados-horario'><h2>08:00</h2></div>
+        <div className='dados-horario'>
+          <div className="horario" >08:00</div>
+          </div>
         <div className='dados-usuario' >
           <ul>
-            <li>cliente: {cliente} </li>
+            <li><h2>cliente: {cliente}</h2></li>
             <li>funcionario: {funcionario}</li>
             <li>tratamento: {tratamento}</li>
             <li>telefone: {telefone}</li>

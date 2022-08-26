@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './components/card/Card';
 import './global.css';
-import { Cartao, Container } from './styles';
+import { Container } from './styles';
 
 
 function App() {
