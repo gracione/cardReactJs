@@ -8,4 +8,9 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-around;
     padding:1px;
+
+    a{
+        text-decoration:none;
+        color:black;
+    }
     `;

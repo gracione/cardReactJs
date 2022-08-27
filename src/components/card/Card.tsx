@@ -1,25 +1,44 @@
 import { Cartao } from "./style";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 interface tipoDeDados {
   cliente: string;
   funcionario: string;
   tratamento: string;
   telefone: string;
+  horario: string;
+  data: string;
 }
 
-function Card({ cliente, funcionario, tratamento, telefone }: tipoDeDados) {
+function Card({ cliente, funcionario, tratamento, telefone, horario, data }: tipoDeDados) {
+  let linkTelefone = "https://api.whatsapp.com/send/?phone=+55" + telefone + "&text=oi";
   return (
     <>
       <Cartao>
         <div className='dados-horario'>
-          <div className="horario" >08:00</div>
+          <div className="horario" >
+            {horario}
           </div>
+          <div className="data" >
+            {data}
+          </div>
+        </div>
         <div className='dados-usuario' >
           <ul>
-            <li><h2>cliente: {cliente}</h2></li>
+            <li className="cliente" >
+              cliente: {cliente}
+              <span><img src="../../icons/lapis.png"></img></span>
+            </li>
             <li>funcionario: {funcionario}</li>
             <li>tratamento: {tratamento}</li>
-            <li>telefone: {telefone}</li>
+            <li>
+              <a href={linkTelefone}>
+                telefone: {telefone}
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </a>
+            </li>
+
           </ul>
           <div className='confirmar-desmarcar' >
             <div className='confirmar'>CONFIRMAR</div>
@@ -29,6 +48,8 @@ function Card({ cliente, funcionario, tratamento, telefone }: tipoDeDados) {
       </Cartao>
     </>
   );
+
+
 }
 
 export default Card;
